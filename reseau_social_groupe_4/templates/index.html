@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ToDo App</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='flatly.min.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="container-fluid" id="wrapper">
+			
+			<div class="row">
+				<div class="col-lg-5 col-lg-offset-5" id="content">
+					<h2>Enter your informations</h2>
+					
+					<form action="{{ url_for('main.add_user') }}" method="POST" role="form">
+					
+						<div class="form-group">
+							<div class="input-group">
+							  <h3>Identity: </h3>	
+							  <label>Name:<br>    		
+								<input name="user_name" type="text" class="form-control" placeholder="Enter your name" aria-label="Todo" aria-describedby="add-btn">
+							  </label>
+							  </br>
+							  </br>
+							  <p>Sexe:</p>  
+							    <input type="radio" name="user_sexe" value="male" class="form-control" placeholder="Enter your name" aria-label="Todo" aria-describedby="add-btn"> Male <br>  
+							    <input type="radio" name="user_sexe" value="female" class="form-control" placeholder="Enter your name" aria-label="Todo" aria-describedby="add-btn"> Female <br>  
+							  </br>
+							  </br>
+							  <label>Date of birth (jj/mm/):<br>  
+								<input name="user_date_of_birth" type="date" class="form-control" aria-label="Todo" aria-describedby="add-btn"> 
+							  </label>
+							  </br>
+							  </br>
+							  <h3>Contact: </h3>
+							  <label>E-mail:<br>
+								<input name="user_email" type="text" class="form-control" placeholder="Enter your email" aria-label="Todo" aria-describedby="add-btn"> 
+							  </label>
+							  </br>
+							  </br>
+							  <label>Téléphone:<br>
+								<input name="user_num" type="text" class="form-control" placeholder="Enter your call" aria-label="Todo" aria-describedby="add-btn"> 
+							  </label>
+							  </br>
+							  </br>
+							  <h3>Profil: </h3>
+							  <label>City:<br>
+								<input name="user_city" type="text" class="form-control" placeholder="Enter your city" aria-label="Todo" aria-describedby="add-btn"> 
+							  </label>
+							  </br>
+							  </br>
+							  <label>College:<br>
+								<input name="user_college" type="text" class="form-control" placeholder="Enter your college" aria-label="Todo" aria-describedby="add-btn"> 
+							  </label>
+							  </br>
+							  </br>
+							  <label>Firm:<br>
+								<input name="user_firm" type="text" class="form-control" placeholder="Enter your firm" aria-label="Todo" aria-describedby="add-btn"> 
+							  </label>
+							  </br>
+							  </br>
+							  <span class="input-group-btn">
+								  <button type="submit" class="btn btn-default" id="add-btn">Submit</button>
+							  </span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<footer>
+				<div class="row pad">
+					<div class="col-lg-12 text-center">
+						Copyright &copy; 2021 <strong>GROUPE_4 APP</strong>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
